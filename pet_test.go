@@ -13,7 +13,7 @@ type testpairdog struct {
 	answer int
 }
 
-func TestPet(t *testing.T) {
+func TestHumanYears(t *testing.T) {
 	cats := []testpaircat{
 		{
 			Cat: Cat{
