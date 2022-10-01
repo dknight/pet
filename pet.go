@@ -1,15 +1,16 @@
 // Package pet provides interface for working with pets.
 package pet
 
+// Vet defines interface for pets.
+type Vet interface {
+	HumanYears() int
+}
+
 // Pet defines pet type.
 type Pet struct {
 	Name  string
 	Years int
-}
-
-// Vet defines interface for pets.
-type Vet interface {
-	HumanYears() int
+	Vet
 }
 
 // Dog defines type of a dog.

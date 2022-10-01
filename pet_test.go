@@ -1,50 +1,68 @@
 package pet
 
-import "testing"
+import (
+	"testing"
+)
 
 type testpaircat struct {
-	Vet
+	Cat
+	answer int
+}
+type testpairdog struct {
+	Dog
 	answer int
 }
 
-func TestingHumanYears(t *testing.T) {
-	pairs := []testpaircat{
+func TestPet(t *testing.T) {
+	cats := []testpaircat{
 		{
-			Vet: Cat{
+			Cat: Cat{
 				Name:  "Barsik",
 				Years: 3,
 			},
 			answer: 30,
 		},
 		{
-			Vet: Cat{
+			Cat: Cat{
 				Name:  "Murka",
 				Years: 10,
 			},
 			answer: 100,
 		},
+	}
+
+	dogs := []testpairdog{
 		{
-			Vet: Dog{
+			Dog: Dog{
 				Name:  "Bobik",
-				Years: 5,
+				Years: 3,
 			},
-			answer: 35,
+			answer: 21,
 		},
 		{
-			Vet: Dog{
+			Dog: Dog{
 				Name:  "Barboss",
-				Years: 9,
+				Years: 7,
 			},
-			answer: 63,
+			answer: 49,
 		},
 	}
 
-	for _, p := range pairs {
-		if p.HumanYears() != p.answer {
+	for _, c := range cats {
+		if c.HumanYears() != c.answer {
 			t.Error(
-				"for", p.Vet,
-				"expected", p.answer,
-				"got", p.HumanYears(),
+				"for", c.Cat,
+				"expected", c.answer,
+				"got", c.HumanYears(),
+			)
+		}
+	}
+	for _, d := range dogs {
+		if d.HumanYears() != d.answer {
+			t.Error(
+				"for", d.Dog,
+				"expected", d.answer,
+				"got", d.HumanYears(),
 			)
 		}
 	}
