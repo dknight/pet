@@ -1,7 +1,6 @@
 package pet
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -67,21 +66,4 @@ func TestHumanYears(t *testing.T) {
 			)
 		}
 	}
-}
-
-func ExampleCat() {
-	cat := Cat{
-		Name:  "Barsik",
-		Years: 2,
-	}
-	fmt.Println(cat.HumanYears())
-	// Output: 20
-}
-func ExampleDog() {
-	dog := Dog{
-		Name:  "Barboss",
-		Years: 3,
-	}
-	fmt.Println(dog.HumanYears())
-	// Output: 21
 }
