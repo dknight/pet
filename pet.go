@@ -7,8 +7,10 @@ type Vet interface {
 }
 
 // Pet defines pet type. At the moment 2 pets are implemented:
-//	1. Dog
-//	2. Cat
+//
+//  1. Dog
+//  2. Cat
+//
 type Pet struct {
 	Name  string
 	Years int
