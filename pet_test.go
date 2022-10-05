@@ -67,3 +67,11 @@ func TestHumanYears(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkHumanYears(b *testing.B) {
+	cat := Cat{
+		Name:  "Barsik",
+		Years: 5,
+	}
+	cat.HumanYears()
+}
