@@ -1,4 +1,4 @@
-module dknight/pet
+module github.com/dknight/pet
 
 go 1.18
 
